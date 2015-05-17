@@ -1,0 +1,6 @@
+{
+ "argv": ["q", "run_kernel.q", "-conn", "{connection_file}"],
+ "display_name": "KDB+/Q",
+ "language": "Q"
+}
+

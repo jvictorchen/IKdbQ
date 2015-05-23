@@ -173,10 +173,15 @@
   :-1
   }
 
+// Thanks to Aaron Davies's script processor 
+// k) {x:("#!"~2#*x)_x:-1!'x;y{0N!x y}'"\n"/:'(&~^*:'x)_x@:&(#:'x)&~"/"=*:'x@:&~|':(b?-1)#b:+\-/x~\:/:+,"/\\";};
+k) .kernel.loader: {x:("#!"~2#*x)_x:-1!'x;last y{x y}'"\n"/:'(&~^*:'x)_x@:&(#:'x)&~"/"=*:'x@:&~|':(b?-1)#b:+\-/x~\:/:+,"/\\"};
+
 // simple code executor 
 .kernel.code_executor: {[code]
   signature: first 1?0Ng; 
-  f: {[code;id] r: value code; `sig`res!(id;r)}[;signature];
+  // f: {[code;id] r: value code; `sig`res!(id;r)}[;signature];
+  f: {[code;id] r: .kernel.loader[;"q"] "\n" vs code; `sig`res!(id;r)}[;signature];
   r: @[f;code;{`sig`res!(0Ng;x)}];
   status: $[signature=r`sig;"ok";"error"];
   res: `status`val!(status;r`res);

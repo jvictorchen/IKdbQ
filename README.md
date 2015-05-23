@@ -26,6 +26,6 @@ A simple IPython(v3.1) Kernel for [KDB+/Q](http://kx.com/software.php)
 3. Run Ipython
 
 	`ipython console --kernel q -f connection.json`  
-	`ipython qtconsole --kernel q -f connection.json`
+	`ipython qtconsole --kernel q -f connection.json`  
 	`ipython notebook` (then choose language KDB+/Q)
 

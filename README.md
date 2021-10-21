@@ -2,11 +2,11 @@
 IKdbQ is a simple kernel for
 [Jupyter project](http://ipython.org) that allows you to write
 [KDB+/Q](http://kx.com/software.php) code with Jupyter console and notebook. It was initially translated
-from [simple_kernel](https://github.com/dsblank/simple_kerne). 
+from [simple_kernel](https://github.com/dsblank/simple_kernel). 
 
 Currently it supports basic code execution and naive code
 completion. It's worth mentioning that multi-line input without
-trailing semicolons is supported in notebook, as supposed to most
+trailing semicolons is supported in notebook, as opposed to most
 other Q IDE's.
 
 More advanced features are to be done in the future.
@@ -25,7 +25,7 @@ is needed.
   It requires ZeroMQ (2.2.0) and czmq.  
   **Note:** jaeheum upgraded his qzmq to version 3.0.1 recently. 
 
-## Install [qcrypt](http://code.kx.com/wsvn/code/contrib/aquaqanalytics/Qcrypt/qcrypt.c) (Q interface for OpenSSL)
+## Install [qcrypt](https://github.com/johnanthonyludlow/kdb/blob/master/QCrypt/qcrypt.c) (Q interface for OpenSSL)
 1. Install
   [OpenSSL](http://geeksww.com/tutorials/libraries/openssl/installation/installing_openssl_on_ubuntu_linux.php)  
   Note: use `sudo make install_sw` (instead of `make install`) if you

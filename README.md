@@ -33,23 +33,23 @@ is needed.
 
 2. Compile qcrypt for Q
 
-	`gcc -DKXVER=3 -shared -fPIC qcrypt.c -o qcrypt.so -Wall -Wextra -I../kx/kdb+3.0/ -L../kx/kdb+3.0/l32 -L/usr/local/openssl/lib -I/usr/local/openssl/include -lssl -lcrypto -ldl`
-	`cp qcrypt.so $HOME/q/l32`  
-	`cp qcrypt.q $HOME/q/`
+	gcc -DKXVER=3 -shared -fPIC qcrypt.c -o qcrypt.so -Wall -Wextra -I../kx/kdb+3.0/ -L../kx/kdb+3.0/l32 -L/usr/local/openssl/lib -I/usr/local/openssl/include -lssl -lcrypto -ldl
+	cp qcrypt.so $HOME/q/l32
+	cp qcrypt.q $HOME/q/
 
 ## Install IPython 3.1
 On Ubuntu:
-	`pip install ipython[all]`
+	pip install ipython[all]
 
 ## Configuring Jupyter
 Create a folder called `q` under `~/.ipython/kernels`, and copy
 `kernel.json` there.
 
-	`mkdir -p ~/.ipython/kernels/q && cp ./kernel.json ~/.ipython/kernels/q`
+	mkdir -p ~/.ipython/kernels/q && cp ./kernel.json ~/.ipython/kernels/q
 
 # Start IKdbQ
 
-	`ipython console --kernel q -f connection.json`  
-	`ipython qtconsole --kernel q -f connection.json`  
-	`ipython notebook` (then choose language KDB+/Q)
+	ipython console --kernel q -f connection.json
+	ipython qtconsole --kernel q -f connection.json
+	ipython notebook` (then choose language KDB+/Q)
 
